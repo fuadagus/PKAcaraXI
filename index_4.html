@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<body onload="startTime()">
+    <h2>JavaScrit Clock</h2>
+    <div id="txt"></div>
+
+    <script>
+        function startTime(){
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById("txt").innerHTML = h + ":" +m +":"+s;
+
+
+        }
+
+        function checkTime(i){
+            if (i<10){
+                i = "0" + i;
+                return i;
+            }
+        }
+    </script>
+    
+</body>
+</html>
